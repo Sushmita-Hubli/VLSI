@@ -1,1 +1,28 @@
+const prompt=require("prompt-sync")();
+const table=parseInt(prompt("Enter a integer: "));
+console.log(`Multiplication of ${table} using For loop is: `);
+var i=1;
+var result;
+for(i=1;i<=10;i++)
+{
+    result= table*i;
+    console.log(`${table} X ${i} = ${result}`);
+}
+console.log(`Multiplication of ${table} using while loop is: `);
+var i=1;
+var result;
+while(i<=10)
+{
+    result=table*i;
+    console.log(`${table} X ${i} = ${result}`);
+    i++;
+}
+console.log(`Multiplication of ${table} using do while loop is: `);
+var i=1;
+var result;
+do{
+    result=table*i;
+    console.log(`${table} X ${i} = ${result}`);
+    i++;
 
+}while(i<=10);
