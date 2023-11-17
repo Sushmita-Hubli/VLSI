@@ -1,1 +1,99 @@
+<!-- 
+    function COMPARE()
+{
+    const str1=document.getElementById("string1").value;
+    const str2=document.getElementById("string2").value;
+    touppercase(str1,str2);
+    regcompare(str1,str2);
+    localcomparison(str1,str2);
+    strictcomparison(str1,str2);
+}
 
+function touppercase(str1,str2)
+{
+    // const result= ;  //RETURNS TRUE OR FALSE
+    if(str1.toUpperCase()==str2.toUpperCase())
+    {
+        document.getElementById("result1").innerHTML="Strings are similar";
+    }
+    else
+    {
+        document.getElementById("result1").innerHTML="Strings are not similar";
+    }
+}
+
+function regcompare(str1,str2)
+{
+    const pattern= new RegExp(str1,"gi");
+    const s2=pattern.test(str2);   //RETURNS TRUE OR FALSE
+    if(s2)
+    {
+          document.getElementById("result2").innerHTML="Strings are similar"
+    }
+    else
+    {
+        document.getElementById("result2").innerHTML="Strings are not similar"
+    }
+}
+
+function localcomparison(str1,str2)
+{
+    const stra= str1.localeCompare(str2,undefined,{sensitivity:'base'});  //RETURNS NEGATIVE OR 0 OR POSITIVE INTEGER
+    if(stra==0)
+    {
+        document.getElementById("result3").innerHTML="Strings are similar";
+    }
+    else{
+        document.getElementById("result3").innerHTML="Strings are not similar";
+    
+    }
+}
+
+
+function strictcomparison(str1,str2)
+{
+    if(str1===str2)
+    {
+        document.getElementById("result4").innerHTML="Strings are Similar";
+    }
+    else
+    {
+        document.getElementById("result4").innerHTML="Strings are not similar";
+    }
+    }
+
+ -->
+
+<html>
+    <head>
+<title>STRING COMPARISON</title>
+    </head>
+    <body>
+       <h1>STRING COMPARISON OPERATION</h1>
+
+
+       <label for="string1">Enter String1</label>
+       <input type="text" id="string1"><br>
+    <label for="string2">Enter String2</label>
+    <input type="text" id="string2"><br>
+
+
+
+       <h2>Comparison using toUpperCase() method</h2> 
+       <p id="result1"></p>
+
+       <h2>Comparison using RegEx method</h2>
+       <p id="result2"></p>
+
+       <h2>Comparison using localeCompare method</h2>
+       <p id="result3"></p>
+
+       <h2>Comparison using Strict equality method</h2>
+         <p id="result4"></p><br><br>
+       <button onclick="COMPARE()">COMPARE</button>
+
+
+<script src="assignment4.js"></script>
+       
+    </body>
+</html>
