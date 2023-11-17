@@ -1,1 +1,132 @@
+<!-- 
+    function reversestring()
+{
+   const str1=document.getElementById("reversestring").value;
+   const str2=str1.split("").reverse().join("");
+   document.getElementById("result1").innerHTML=`Reversed String is ${str2}`;
+}
 
+function reverseloop()
+{
+    const str1=document.getElementById("reversestringloop").value;
+    let str2='';
+    for(let i=(str1.length)-1 ; i>=0 ; i--)
+    {
+        str2+= str1.charAt(i);
+    }
+    document.getElementById("result2").innerHTML=`REVERSED STRING IS ${str2}`;
+}
+
+function replacesubstring()
+{
+    const str1=document.getElementById("mainstring1").value;
+    const str2=document.getElementById("substringtoreplace").value;
+    const str3=document.getElementById("newstr1").value;
+    
+    const suby= str1.replace(str2,str3);
+    document.getElementById("result3").innerHTML=`new string is ${suby}`
+}
+
+function replacecharacter()
+{
+    const str1=document.getElementById("mainstring2").value;
+    const str2=document.getElementById("charactertoreplace").value;
+    const str3=document.getElementById("newstr2").value;
+    const subx=str1.split(str2);
+    const suby=subx.join(str3);
+    document.getElementById("result4").innerHTML=`new string is ${suby}`
+}
+
+
+
+function checkpalindrome()
+{
+    const str1=document.getElementById("palind").value;
+    const str2=str1.toLowerCase();
+    const str3=str2.split("").reverse().join("");
+   const result=str2.localeCompare(str3);
+   if(result==0)
+   {
+    document.getElementById("result5").innerHTML='String is a palindrome'
+   }
+   else
+   {
+    document.getElementById("result5").innerHTML='String is not a palindrome'
+   }
+}
+
+function reset()
+{
+    document.getElementById("reversestring").value = '';
+    document.getElementById("result1").innerHTML = '';
+
+    document.getElementById("reversestringloop").value = '';
+    document.getElementById("result2").innerHTML = '';
+
+    document.getElementById("mainstring1").value = '';
+    document.getElementById("substringtoreplace").value = '';
+    document.getElementById("newstr1").value = '';
+    document.getElementById("result3").innerHTML = '';
+
+    document.getElementById("mainstring2").value = '';
+    document.getElementById("charactertoreplace").value = '';
+    document.getElementById("newstr2").value = '';
+    document.getElementById("result4").innerHTML = '';
+
+    document.getElementById("palind").value = '';
+    document.getElementById("result5").innerHTML = '';
+}
+ -->
+
+
+<html>
+    <head>
+<title>STRING OPERATIONS</title>
+    </head>
+    <body>
+        <h2>STRING OPERATIONS</h2>
+        <h3>REVERSE STRING</h3>
+        <label for="reversestring">String to reverse</label>
+        <input type="text" id="reversestring">
+        <button onclick="reversestring()">Reverse String</button><br>
+        <p id="result1"></p>
+
+
+        <h3>REVERSE STRING USING LOOP</h3>
+        <label for="reversestringloop">Reverse string using loop</label>
+        <input type="text" id="reversestringloop">
+        <button onclick="reverseloop()">REVERSE</button><br>
+        <p id="result2"></p>
+
+        <h3>REPLACE SUBSTRING</h3>
+        <label for="mainstring1">Enter String</label>
+        <input type="text" id="mainstring1"><br>
+        <label for="substringtoreplace">Enter Substring to be replaced</label>
+        <input type="text" id="substringtoreplace"><br>
+        <label for="newstr1">Enter string to be repaced with</label>
+        <input type="text" id="newstr1">
+        <button onclick="replacesubstring()">REPLACE SUBSTRING</button><br>
+        <p id="result3"></p>
+
+        <h3>REPLACE CHARACTER</h3>
+        <label for="mainstring2">Enter String</label>
+        <input type="text" id="mainstring2"><br>
+        <label for="charactertoreplace">Enter Character to be replaced</label>
+        <input type="text" id="charactertoreplace"><br>
+        <label for="newstr2">Enter character to be repaced with</label>
+        <input type="text" id="newstr2">
+        <button onclick="replacecharacter()">REPLACE CHARACTER</button><br>
+        <p id="result4"></p>
+
+        <h3>PALINDROME CHECK</h3>
+        <label for="palind">Enter String</label>
+        <input type="text" id="palind">
+        <button onclick="checkpalindrome()">Check</button><br>
+        <p id="result5"></p><br><br>
+
+        <button onclick="reset()">Reset</button>
+
+        <script src="assignment3.js"></script>
+
+    </body>
+</html>
