@@ -1,0 +1,84 @@
+<!-- 
+    function calculatetrianglearea()
+{
+    const width=parseFloat(document.getElementById("trianglewidth").value);
+    const height=parseFloat(document.getElementById("triangleheight").value);
+    if(width<0 || height<0)
+    {
+        document.getElementById("triangleArearesult").innerHTML="Invalid Input";
+    }
+    else
+    {
+        const area=width*height*0.5;
+        document.getElementById("triangleArearesult").innerHTML=`Area of triangle is ${area}` ; 
+    }
+}
+
+function calculaterectanglearea()
+{
+    const width=parseFloat(document.getElementById("rectanglewidth").value);
+    const height=parseFloat(document.getElementById("rectangleheight").value);
+    if(width<0 || height<0)
+    {
+        document.getElementById("rectangleArearesult").innerHTML="Invalid Input";
+    }
+    else
+    {
+        const area=width*height;
+        document.getElementById("rectangleArearesult").innerHTML=`Area of rectangle is ${area}` ; 
+    }
+}
+
+function calculatecirclearea()
+{
+    const radius=parseFloat(document.getElementById("circleradius").value);
+    
+    if(radius<0)
+    {
+        document.getElementById("circleArearesult").innerHTML="Invalid Input";
+    }
+    else
+    {
+        const area=3.14*radius*radius;
+        document.getElementById("circleArearesult").innerHTML=`Area of triangle is ${area.toFixed(2)}` ; 
+    }
+}
+ -->
+
+
+<html>
+    <head>
+<title>Area Calculation</title>
+    </head>
+    <body>
+        
+       <h2>Area of Triangle</h2><br>
+       <label for="trianglewidth">Width of Triangle</label>
+       <input type="number" id="trianglewidth">
+       <br><br><br>
+       <label for="triangleheight">Height of Triangle</label>
+       <input type="number" id="triangleheight">
+       <button onclick="calculatetrianglearea()">Calculate Area</button>
+       <p id="triangleArearesult"></p><br>
+
+        
+       <h2>Area of Rectangle</h2><br>
+       <label for="rectanglewidth"> Width of Rectangle</label>
+       <input type="number" id="rectanglewidth">
+       <br><br><br>
+       <label for="rectangleheight"> Height of Rectangle</label>
+       <input type="number" id="rectangleheight">
+       <button onclick="calculaterectanglearea()">Calculate Area</button>
+       <p id="rectangleArearesult"></p><br>
+
+        
+       <h2>Area of Circle</h2><br>
+       <label for="circleradius">radius of circle</label>
+       <input type="number" id="circleradius">
+       <button onclick="calculatecirclearea()">Calculate Area</button>
+       <p id="circleArearesult"></p><br>
+
+       <script src="assignment1.js"></script>
+        
+    </body>
+</html>
