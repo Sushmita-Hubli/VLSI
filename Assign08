@@ -1,1 +1,50 @@
+<html>
+    <head>
+<title>EVENT</title>
+<style>
+    body{
+        text-align: center;
+    }
+.abc
+{ display: flex;
+    margin-top: 200px;
+  justify-content: center;
+ 
 
+}
+#mouseover,#focus
+{
+   
+    margin: 20px;
+    border: 1px solid black;
+    padding: 20px;
+}
+</style>
+    </head>
+    <body>
+   <div class="abc">
+    
+    <div id="mouseover">
+     <button onmouseover="mouseevent()">Mouse event</button>
+    </div>
+
+    <div id="focus">
+        <input type="text" onfocus="focusevent()">
+      
+    </div>
+
+   </div>
+
+   <script>
+    function mouseevent()
+    {
+        document.getElementById("mouseover").style.backgroundColor= "FF0000";
+    }
+    function focusevent()
+    {
+        document.getElementById("focus").style.backgroundColor= "FFFF00";
+    }
+   </script>
+    </body>
+    
+</html>
