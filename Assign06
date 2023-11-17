@@ -1,1 +1,81 @@
+<!-- 
+    let myArr=[];
+function setArray()
+{
+    const inputArr=document.getElementById("inputArray").value;
+    myArr=inputArr.split(',').map(item=>parseInt(item));
+    displayArray();
+}
 
+
+function removeelement() {
+    const elementtoremove = parseInt(document.getElementById("eleremove").value);
+    const index = myArr.indexOf(elementtoremove);
+
+    if (index !== -1) {
+        myArr.splice(index, 1);
+        displayArray();
+        document.getElementById("resultdisplay").innerHTML = "Element removed";
+    } else {
+        displayArray();
+        document.getElementById("resultdisplay").innerHTML = "Element not present";
+    }
+}
+
+function checkvalue() {
+    const value = parseInt(document.getElementById("checkval").value);
+    const index = myArr.indexOf(value);
+
+    if (index !== -1) {
+        document.getElementById("resultdisplay").innerHTML = `Element found at index ${index}`;
+    } else {
+        document.getElementById("resultdisplay").innerHTML = "Element not found";
+    }
+}
+function displayArray()
+{
+    
+    document.getElementById("arraydisplay").innerHTML=JSON.stringify(myArr);
+}
+
+function empty()
+{
+    myArr=[];
+    displayArray();
+    document.getElementById("resultdisplay").innerHTML="Array emptied";
+}
+ -->
+<html>
+    <head>
+<title>Array Operations</title>
+    </head>
+    <body style="text-align: center;">
+        <br><br><br>
+        <h2>Array Operations</h2>
+        <label for="inputArray">Enter array elements seperated by comma</label>
+        <input type="text" id="inputArray">
+        <button onclick="setArray()">SET ARRAY</button><br><br>
+
+        <label for="eleremove">Enter element to remove</label>
+        <input type="number" id="eleremove">
+        <button onclick="removeelement()">Delete element</button><br><br>
+
+        <label for="checkval">Enter element to check</label>
+        <input type="number" id="checkval">
+        <button onclick="checkvalue()">Check Value</button><br><br>
+
+
+        <button onclick="displayArray()">DISPLAY ARRAY</button><br><br>
+
+        
+        <button onclick="empty()">EMPTY ARRAY</button><br><br>
+        <div>
+            <h2>Array:</h2>
+            <p id="arraydisplay"></p>
+        </div>
+        
+        <p id="resultdisplay"></p>
+
+        <script src="assignment6.js"></script>
+    </body>
+</html>
