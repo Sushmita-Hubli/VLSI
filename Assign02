@@ -1,0 +1,61 @@
+<!-- 
+    function calculate()
+{
+    const num= parseFloat(document.getElementById("inputvalue").value);
+    let resultstring1='';
+    for(let i=1 ; i<=10 ; i++)
+    {
+          let final=num*i;
+          resultstring1 += `${num} X ${i} = ${final}<br>`;    
+    }
+    document.getElementById("result1").innerHTML=resultstring1;
+
+
+    let resultstring2='';
+    let i=1;
+    while(i<=10)
+    {
+          let final=num*i;
+          resultstring2 += `${num} X ${i} = ${final}<br>`; 
+          i++;   
+    }
+    document.getElementById("result2").innerHTML=resultstring2;
+
+    let resultstring3='';
+    let j=1;
+    do
+    {
+          let final=num*j;
+          resultstring3 += `${num} X ${j} = ${final}<br>`;
+          j++;    
+    }while(j<=10);
+    document.getElementById("result3").innerHTML=resultstring3;
+
+
+}
+ -->
+
+<html>
+    <head>
+     <title>Multiplication Table using Loops</title>
+    </head>
+    <body>
+   <h1>Multiplication table using loops</h1>
+   <br><br><br>
+   <label for="inputvalue">Enter a number</label>
+   <input type="number" id="inputvalue"><br><br>
+   <button onclick="calculate()">Submit</button><br>
+
+   <h2>For Loop</h2>
+   <p id="result1">
+   </p><br>
+
+   <h2>While Loop</h2>
+   <p id="result2"></p><br>
+
+   <h2>do while loop</h2>
+   <p id="result3"></p>
+   
+   <script src="assignment2.js"></script>
+    </body>
+</html>
